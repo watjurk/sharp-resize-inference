@@ -10,7 +10,7 @@ o.metadata((_, metadata) => {
 	console.log(`Inferred height is ${inferredHeight}`);
 });
 
-o = o.resize({ width: targetWidth });
+o = o.resize({ width: targetWidth, fastShrinkOnLoad: false });
 o.toFile("./image_resized.jpeg", (_, info) => {
 	console.log(`Image height after resizing is ${info.height}`);
 });
